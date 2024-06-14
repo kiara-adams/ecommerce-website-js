@@ -746,4 +746,217 @@ header {
   .navbar ul li a:hover {
     color: black; 
   }
-  
+  about-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    min-height: 280px;
+    align-items: center;
+    color: var(--3rd-color, #FFF8EE);
+    justify-content: center;
+    padding: 72px 60px;
+    margin-bottom: 150px;
+  }
+  @media (max-width: 991px) {
+    .about-container {
+      padding: 0 20px;
+    }
+  }
+  .background-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .content-wrapper {
+    position: relative;
+    display: flex;
+    margin-top: 76px;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .content-wrapper {
+      margin-top: 40px;
+    }
+  }
+  .title {
+    align-self: center;
+    font: 35px Roboto, sans-serif;
+  }
+  .description {
+    margin-left: 190px;
+    text-align: justify;
+    margin-top: 17px;
+  }
+  /* about part 2 */
+  .our-story-container {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .our-story-title {
+    color: var(--primary-color, rgb(246, 217, 217));
+    text-align: center;
+    font: 700 35px Roboto, sans-serif;
+  }
+  .our-story-content {
+    margin-top: 36px;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .our-story-content {
+      max-width: 100%;
+    }
+  }
+  .content-columns {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 991px) {
+    .content-columns {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+    }
+  }
+  .text-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 40px;
+  }
+  @media (max-width: 991px) {
+    .text-column {
+      width: 100%;
+    }
+  }
+  .text-content {
+    color: var(--second-color, #e3758e);
+    text-align: justify;
+    margin-top: 22px;
+    font: 400 18px Roboto, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .text-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  @media (max-width: 991px) {
+    .image-column {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .responsive-image {
+    object-fit: cover;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid #ebbfbf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  @media (max-width: 991px) {
+    .responsive-image {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+  /* about part 3 */
+  .team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  }
+  .team-info {
+  text-align: center;
+  color: var(--second-color, #f9c6ec);
+  }
+  .team-heading {
+  font: 700 35px Roboto, sans-serif;
+  }
+  .team-intro {
+  font: 400 18px Roboto, sans-serif;
+  margin-bottom: 50px;
+  }
+  .members-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  }
+  @media (max-width: 991px) {
+  .members-row {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+  }
+  }
+  .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 400px;
+  }
+  .member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-color, rgb(228, 196, 196));
+  }
+  .member-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--3rd-color, #FFF8EE);
+  border: 3px solid rgb(229, 187, 187);
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  }
+  @media (max-width: 991px) {
+  .member-details {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  }
+  .member-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid rgb(255, 201, 201);
+  border-radius: 50%;
+  margin-bottom: 60px;
+  }
+  .member-title {
+  font: 700 20px Roboto, sans-serif;
+  margin-bottom: 10px;
+  }
+  .member-description {
+  font: 400 16px Roboto, sans-serif;
+  }
+  @media (max-width: 991px) {
+  .column {
+    width: 100%;
+  }
+  }
+  .about-container{padding-top: 600px;}
