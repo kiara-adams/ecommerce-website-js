@@ -8,188 +8,322 @@
 </head>
 
 <body class="body-product">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#"><img src="https://kiara-adams.github.io/ecommerce-images/download/Pink Aesthetic Beauty Logo .png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Shop
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Category 1</a>
-                  <a class="dropdown-item" href="#">Category 2</a>
-                  <a class="dropdown-item" href="#">Category 3</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
+    <div id="navbar" class="navbar">
+        <a href="./product.html" class="logo"><img src="https://kiara-adams.github.io/ecommerce-images/Pink_Aesthetic_Beauty_Logo_-removebg-preview.png" alt="Logo"></a>
+        <div class="dropdown">
+            <a href="..//index.html">Home</a>
+            <a href="../HTML/about.html">About</a>
+            <a href="../HTML/product.html" class="dropbtn">collection</a>
+            <div class="dropdown-content">
+                <a href="#rings">Rings</a>
+                <a href="#necklace">Necklace</a>
+                <a href="#bracelets">bracelets</a>
+            </div>
+            <a href="../HTML/contact.html">contact</a>
+            <a href="../HTML/admin.html">admin</a>
+            <a href="../HTML/cart.html">cart</a>
         </div>
-      </nav>
-
-<main>
-    <div class="card"></div>
-        <img class="card-img-top" src="https://kiara-adams.github.io/ecommerce-images/pexels-sunsetoned-6624862.jpg" alt="Card image">
-        <div class="card-img-overlay">
-          <h4 class="card-title">Athena</h4>
-          <p class="card-text">view our latest collection.</p>
-          <a href="#" class="btn btn-primary">shop collection</a>
-        </div>
-      </div>
-
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="circle-container">
-            <a href="#" class="text-decoration-none">
-                <div class="circle border border-primary">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/download (12).jpg" alt="Circular Card" class="img-fluid">
-                </div>
-                <div class="card-text">RINGS</div>
-            </a>
-        </div>
-        <div class="circle-container">
-            <a href="#rings" class="text-decoration-none">
-                <div class="circle border border-primary">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/✰ follow @txmtxms on pinterest for more ✰.jpg" alt="Circular Card" class="img-fluid">
-                </div>
-                <div class="card-text">EARINGS</div>
-            </a>
-        </div>
-        <div class="circle-container">
-            <a href="./shop.html" class="text-decoration-none">
-                <div class="circle border border-primary">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/download (14).jpg" alt="Circular Card" class="img-fluid">
-                </div>
-                <div class="card-text">NECKLACE</div>
-            </a>
-        </div>
-        <div class="circle-container">
-            <a href="./shop.html" class="text-decoration-none">
-                <div class="circle border border-primary">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/download (15).jpg" alt="Circular Card" class="img-fluid">
-                </div>
-                <div class="card-text">BRACELETS</div>
-            </a>
-        </div>
-        <div class="circle-container">
-            <a href="./shop.html" class="text-decoration-none">
-                <div class="circle border border-primary">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/18k gold plated, handmade pearl and zirconia pink saturn necklace_choker_comes beautifully gift wrapped_handmade_sparkly_Princess_royal.jpg" alt="Circular Card" class="img-fluid">
-                </div>
-                <div class="card-text">MAKEUP</div>
-            </a>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
         </div>
     </div>
-</div>
-  </div>
-</div>
-        <section id="rings">
-            <div class="products">
-                <article class="product" id="product1">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/ring img1.jpg" alt="Product 1">
-                    <h2>Product 1</h2>
-                    <p>Description of Product 1</p>
-                    <span>R1900.99</span>
-                    <button id="product1-btn" onclick="addToCart('Product 1', 1900.99, 'product1-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product2">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/ring img 2.jpg" alt="Product 2">
-                    <h2>Product 2</h2>
-                    <p>Description of Product 2</p>
-                    <span>R2500.99</span>
-                    <button id="product2-btn" onclick="addToCart('Product 2', 2500.99, 'product2-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product3">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/ring img 3.jpg" alt="Product 3">
-                    <h2>Product 3</h2>
-                    <p>Description of Product 3</p>
-                    <span>R2400.99</span>
-                    <button id="product3-btn" onclick="addToCart('Product 3', 2400.99, 'product3-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product4">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/ring img 4.jpg" alt="Product 4">
-                    <h2>Product 4</h2>
-                    <p>Description of Product 4</p>
-                    <span>R1000.99</span>
-                    <button id="product4-btn" onclick="addToCart('Product 4', 1000.99, 'product4-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product11">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/ring img6.jpg" alt="Product 11">
-                    <h2>Product 11</h2>
-                    <p>Description of Product 11</p>
-                    <span>R1000.99</span>
-                    <button id="product11-btn" onclick="addToCart('Product 11', 1000.99, 'product11-btn')">Add to Cart</button>
-                </article>
+    <div class="border-line"></div>
+
+    <main>
+        <div class="card"></div>
+            <img class="card-img-top" src="https://kiara-adams.github.io/ecommerce-images/pexels-sunsetoned-6624862.jpg" alt="Card image">
+            <div class="card-img-overlay">
+                <h4 class="card-title">Athena</h4>
+                <p class="card-text">view our latest collection.</p>
+                <a href="# rings" class="btn btn-primary">shop collection</a>
             </div>
-        </section>
+        </div>
 
-        <section id="earrings">
-            <div class="products">
-                <article class="product" id="product5">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/earring1.jpg" alt="Product 5">
-                    <h2>Product 5</h2>
-                    <p>Description of Product 5</p>
-                    <span>R1800.99</span>
-                    <button id="product5-btn" onclick="addToCart('Product 5', 1800.99, 'product5-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product6">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/earring2.jpg" alt="Product 6">
-                    <h2>Product 6</h2>
-                    <p>Description of Product 6</p>
-                    <span>R2100.99</span>
-                    <button id="product6-btn" onclick="addToCart('Product 6', 2100.99, 'product6-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product7">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/earring3.jpg" alt="Product 7">
-                    <h2>Product 7</h2>
-                    <p>Description of Product 7</p>
-                    <span>R2200.99</span>
-                    <button id="product7-btn" onclick="addToCart('Product 7', 2200.99, 'product7-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product8">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/earring4.jpg" alt="Product 8">
-                    <h2>Product 8</h2>
-                    <p>Description of Product 8</p>
-                    <span>R1500.99</span>
-                    <button id="product8-btn" onclick="addToCart('Product 8', 1500.99, 'product8-btn')">Add to Cart</button>
-                </article>
-                <article class="product" id="product9">
-                    <img src="https://kiara-adams.github.io/ecommerce-images/earring4.jpg" alt="Product 9">
-                    <h2>Product 9</h2>
-                    <p>Description of Product 9</p>
-                    <span>R1500.99</span>
-                    <button id="product9-btn" onclick="addToCart('Product 9', 1500.99, 'product9-btn')">Add to Cart</button>
-                </article>
-            
+        <div class="container-fluid">
+            <div class="row">
+                <div class="circle-container">
+                    <a href="#rings" class="text-decoration-none">
+                        <div class="circle border border-primary">
+                            <img src="https://kiara-adams.github.io/ecommerce-images/download (12).jpg" alt="Circular Card" class="img-fluid">
+                        </div>
+                        <div class="card-text">RINGS</div>
+                    </a>
+                </div>
+                <div class="circle-container">
+                    <a href="#earrings" class="text-decoration-none">
+                        <div class="circle border border-primary">
+                            <img src="https://kiara-adams.github.io/ecommerce-images/✰ follow @txmtxms on pinterest for more ✰.jpg" alt="Circular Card" class="img-fluid">
+                        </div>
+                        <div class="card-text">EARRINGS</div>
+                    </a>
+                </div>
+                <div class="circle-container">
+                    <a href="#necklace" class="text-decoration-none">
+                        <div class="circle border border-primary">
+                            <img src="https://kiara-adams.github.io/ecommerce-images/download (14).jpg" alt="Circular Card" class="img-fluid">
+                        </div>
+                        <div class="card-text">NECKLACE</div>
+                    </a>
+                </div>
+                <div class="circle-container">
+                    <a href="#bracelets" class="text-decoration-none">
+                        <div class="circle border border-primary">
+                            <img src="https://kiara-adams.github.io/ecommerce-images/download (15).jpg" alt="Circular Card" class="img-fluid">
+                        </div>
+                        <div class="card-text">BRACELETS</div>
+                    </a>
+                </div>
+                <div class="circle-container">
+                    <a href="#makeup" class="text-decoration-none">
+                        <div class="circle border border-primary">
+                            <img src="https://kiara-adams.github.io/ecommerce-images/18k gold plated, handmade pearl and zirconia pink saturn necklace_choker_comes beautifully gift wrapped_handmade_sparkly_Princess_royal.jpg" alt="Circular Card" class="img-fluid">
+                        </div>
+                        <div class="card-text">MAKEUP</div>
+                    </a>
+                </div>
             </div>
+        </div>
+        
+        <!-- products -->
+        <div class="product-container">
+            <section id="rings">
+                <h2 class="jewls">Rings</h2>
+                <div class="products">
+                    <article class="product" id="product1">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/ring img1.jpg" alt="Product 1">
+                        <h2>Ring of Artemis</h2>
+                        <p>our beautiful gold artemis ring</p>
+                        <span>R1900.99</span>
+                        <button id="product1-btn" onclick="addToCart('Artemis ring', 1900.99, 'product1-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product2">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/ring img 2.jpg" alt="Product 2">
+                        <h2>Ring of vera</h2>
+                        <p>Our beautiful Ring of Vera inspired by the greek goddess vera </p>
+                        <span>R2500.99</span>
+                        <button id="product2-btn" onclick="addToCart('Vera Ring', 2500.99, 'product2-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product3">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/ring img 3.jpg" alt="Product 3">
+                        <h2>Ring of Ares </h2>
+                        <p>>Our beautiful Ring of Ares inspired by the greek god Ares </p>
+                        <span>R2400.99</span>
+                        <button id="product3-btn" onclick="addToCart('Ares Ring', 2400.99, 'product3-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product4">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/ring img 4.jpg" alt="Product 4">
+                        <h2>Ring of Aphrodite</h2>
+                        <p>>Our beautiful Ring of Aphrodite inspired by the greek Goddess Aphrodite </p>
+                        <span>R1000.99</span>
+                        <button id="product4-btn" onclick="addToCart('Aphrodite Ring', 1000.99, 'product4-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product5">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/ring img6.jpg" alt="Product 5">
+                        <h2>Ring of Gaia</h2>
+                        <p>Our beautiful ring of Gaia inspired by the greek goddes Gaia</p>
+                        <span>R1000.99</span>
+                        <button id="product5-btn" onclick="addToCart('Gaia Ring', 1000.99, 'product5-btn')">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
 
-  </main>
+            <section id="earrings">
+                <h2 class="jewls">Earrings</h2>
+                <div class="products">
+                    <article class="product" id="product6">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/earrringg1.jpg" alt="Product 6">
+                        <h2>Dream </h2>
+                        <p>the very first earring our dream collection named after the goddes of dreams</p>
+                        <span>R800.99</span>
+                        <button id="product6-btn" onclick="addToCart('Dream', 800.99, 'product6-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product7">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/earrringg2.jpg" alt="Product 7">
+                        <h2>Arlo Earring </h2>
+                        <p>our beautiful Arlo Earring </p>
+                        <span>R950.99</span>
+                        <button id="product7-btn" onclick="addToCart('Arlo Earring', 950.99, 'product7-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product8">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/earrinng3.jpg" alt="Product 8">
+                        <h2>REma </h2>
+                        <p>Our Beautiful Rema Earring</p>
+                        <span>R900.99</span>
+                        <button id="product8-btn" onclick="addToCart('Rema Earring', 900.99, 'product8-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product9">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/earring3.jpg" alt="Product 9">
+                        <h2>Ruby </h2>
+                        <p>Our beautiful Earring </p>
+                        <span>R750.99</span>
+                        <button id="product9-btn" onclick="addToCart('Ruby Earring', 750.99, 'product9-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product10">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/earring 2.jpg" alt="Product 10">
+                        <h2>Rossette</h2>
+                        <p>Our beautiful rossete Earring</p>
+                        <span>R780.99</span>
+                        <button id="product10-btn" onclick="addToCart('Rossete Earring', 780.99, 'product10-btn')">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
 
+            <section id="necklace">
+                <h2 class="jewls">Necklace</h2>
+                <div class="products">
+                    <article class="product" id="product11">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/1.jpg" alt="Product 11">
+                        <h2>Love </h2>
+                        <p>From our love collection </p>
+                        <span>R1100.99</span>
+                        <button id="product11-btn" onclick="addToCart('Love', 1100.99, 'product11-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product12">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Opal Angel Necklace.jpeg" alt="Product 12">
+                        <h2>Angel</h2>
+                        <p>from our  angel collection</p>
+                        <span>R2500.99</span>
+                        <button id="product12-btn" onclick="addToCart('Angel', 2500.99, 'product12-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product13">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Cowgirl Star Charm Necklace.jpeg" alt="Product 13">
+                        <h2>Pink cow girl</h2>
+                        <p>one from our rose gold cow girl collection</p>
+                        <span>R2400.99</span>
+                        <button id="product13-btn" onclick="addToCart('Pink Cow gir;', 2400.99, 'product13-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product14">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Pearl Conch Layered Necklace.jpeg" alt="Product 14">
+                        <h2>shelly</h2>
+                        <p>our beautiful seashell necklace </p>
+                        <span>R1400.99</span>
+                        <button id="product14-btn" onclick="addToCart('shelly', 1400.99, 'product14-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product15">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/download (11).jpeg" alt="Product 15">
+                        <h2>neptune</h2>
+                        <p>Around the world</p>
+                        <span>R2100.99</span>
+                        <button id="product15-btn" onclick="addToCart('neptune', 2100.99, 'product15-btn')">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
 
+            <section id="bracelets">
+                <h2 class="jewls">Bracelets</h2>
+                <div class="products">
+                    <article class="product" id="product16">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Pearl Crystal Cross Bracelet.jpeg" alt="Product 16">
+                        <h2>Polly</h2>
+                        <p>from our our polly collection</p>
+                        <span>R1600.99</span>
+                        <button id="product16-btn" onclick="addToCart('Polly', 1600.99, 'product16-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product17">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Heart Wings Wand Necklace.jpeg" alt="Product 17">
+                        <h2>lux</h2>
+                        <p>Description of Product 17</p>
+                        <span>R1900.99</span>
+                        <button id="product17-btn" onclick="addToCart('lux', 1900.99, 'product17-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product18">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Danica Floral Triple Layer Bracelet.jpeg "alt="Product 18">
+                        <h2>lore</h2>
+                        <p>Description of Product 18</p>
+                        <span>R1800.99</span>
+                        <button id="product18-btn" onclick="addToCart('lore', 1800.99, 'product18-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product19">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/braceler.jpg" alt="Product 19">
+                        <h2>leve</h2>
+                        <p>Description of Product 19</p>
+                        <span>R1500.99</span>
+                        <button id="product19-btn" onclick="addToCart('leve', 1500.99, 'product19-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product20">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/download (14).jpg" alt="Product 20">
+                        <h2>london</h2>
+                        <p>Description of Product 20</p>
+                        <span>R2100.99</span>
+                        <button id="product20-btn" onclick="addToCart('london', 2100.99, 'product20-btn')">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
+
+            <section id="makeup">
+                <h2 class="jewls">Makeup</h2>
+                <div class="products">
+                    <article class="product" id="product21">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/makeup blush pink.jpg" alt="Product 21">
+                        <h2>blush</h2>
+                        <p>Description of Product 21</p>
+                        <span>R700.99</span>
+                        <button id="product21-btn" onclick="addToCart('blush', 700.99, 'product21-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product22">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/download (18).jpg" alt="Product 22">
+                        <h2>boston</h2>
+                        <p>Description of Product 22</p>
+                        <span>R800.99</span>
+                        <button id="product22-btn" onclick="addToCart('boston', 800.99, 'product22-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product23">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/🤍.jpg" alt="Product 23">
+                        <h2>pink</h2>
+                        <p>Description of Product 23</p>
+                        <span>R900.99</span>
+                        <button id="product23-btn" onclick="addToCart('pink', 900.99, 'product23-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product24">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/093bfbb2-f8b7-4d36-8611-0decc66a8673.jpg" alt="Product 24">
+                        <h2>heart</h2>
+                        <p>Description of Product 24</p>
+                        <span>R950.99</span>
+                        <button id="product24-btn" onclick="addToCart('heart', 950.99, 'product24-btn')">Add to Cart</button>
+                    </article>
+                    <article class="product" id="product25">
+                        <img src="https://kiara-adams.github.io/ecommerce-images/Aesthetic pallet.jpg" alt="Product 25">
+                        <h2>pia</h2>
+                        <p>Description of Product 25</p>
+                        <span>R1000.99</span>
+                        <button id="pia-btn" onclick="addToCart('pia', 1000.99, 'pia-btn')">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2024 My Store. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2024</span> Aphrodite</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-paper-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1.133l.941.502A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765L2 3.133zm0 2.267-.47.25A1 1 0 0 0 1 5.4v.817l1 .6zm1 3.15 3.75 2.25L8 8.917l1.25.75L13 7.417V2a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm11-.6 1-.6V5.4a1 1 0 0 0-.53-.882L14 4.267zM8 2.982C9.664 1.309 13.825 4.236 8 8 2.175 4.236 6.336 1.31 8 2.982m7 4.401-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734Z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+          </svg>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Learn more about our story and our dedication to providing high-quality products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Get in touch with our customer support team for assistance.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>Stay connected through our social media channels.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="/script/checkout.js"></script>
+<script src="../script/code.js"></script>
+    <script src="../script/checkout.js">
+     
+    </script>
 </body>
 </html>

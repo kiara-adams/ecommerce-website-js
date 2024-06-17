@@ -1,60 +1,151 @@
-function CreateItem(id, name, description, price) {
-    this.id = id;
-    this.name = name;
-    this.description = description;
-    this.price = price;
-  }
-  
-  let item1 = new CreateItem(1, "Product 1", "Description of Product 1", 1900.99);
-  let item2 = new CreateItem(2, "Product 2", "Description of Product 2", 2500.99);
-  let item3 = new CreateItem(3, "Product 3", "Description of Product 3", 2400.99);
-  let item4 = new CreateItem(4, "Product 4", "Description of Product 4", 1000.99);
-  let item5 = new CreateItem(5, "Product 5", "Description of Product 5", 1800.99);
-  let item6 = new CreateItem(6, "Product 6", "Description of Product 6", 2100.99);
-  let item7 = new CreateItem(7, "Product 7", "Description of Product 7", 2200.99);
-  let item8 = new CreateItem(8, "Product 8", "Description of Product 8", 1500.99);
-  let item9 = new CreateItem(9, "Product 9", "Description of Product 9", 1500.99);
-  
 
-  let items = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
-  
+function addToCart(itemName, price, buttonId) {
+    
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-  localStorage.setItem('items', JSON.stringify(items));
   
+  cartItems.push({ name: itemName, price: price });
 
-  let main = document.querySelector('main');
   
- 
-  items.forEach(item => {
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-    const itemDiv = document.createElement('div');
-    itemDiv.className = 'product';
-    itemDiv.innerHTML = `
-      <h2 class="product-name">${item.name}</h2>
-      <p class="product-description">${item.description}</p>
-      <p class="product-price">R ${item.price.toFixed(2)}</p>
-      <button class="button add-to-cart" value="${item.id}">Add to Cart</button>
-      <span class="cart-quantity">(0)</span>
-    `;
-    main.appendChild(itemDiv);
-  
-  
-    const addToCartButton = itemDiv.querySelector('.add-to-cart');
-    const cartQuantitySpan = itemDiv.querySelector('.cart-quantity');
-  
-    addToCartButton.addEventListener('click', () => {
-      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-  
-      const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
-      if (existingItem) {
-        existingItem.quantity = (existingItem.quantity || 0) + 1;
-      } else {
-        cartItems.push({ ...item, quantity: 1 });
-      }
-  
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-      cartQuantitySpan.textContent = `(${existingItem ? existingItem.quantity : 1})`;
-      alert('Item added to cart!');
-    });
+  let button = document.getElementById(buttonId);
+  button.textContent = 'Added to Cart';
+  button.disabled = true;
+
+  window.location.href = "cart.html";
+}
+
+function updateCartDisplay() {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  let cartList = document.getElementById('cart-items');
+  let totalPrice = 0;
+
+  cartList.innerHTML = '';
+
+  cartItems.forEach(item => {
+      let li = document.createElement('li');
+      li.textContent = `${item.name} - R${item.price}`;
+      cartList.appendChild(li);
+
+      totalPrice += parseFloat(item.price);
   });
-  
+
+  document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+}
+
+window.onload = updateCartDisplay;
+
+
+function removeFromCart(index) {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+  cartItems.splice(index, 1);
+
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+  updateCartDisplay();
+}
+
+function updateCartDisplay() {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  let cartList = document.getElementById('cart-items');
+  let totalPrice = 0;
+
+  cartList.innerHTML = '';
+
+  cartItems.forEach((item, index) => {
+      let li = document.createElement('li');
+      li.textContent = `${item.name} - R${item.price}`;
+      
+      let removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.onclick = function() {
+          removeFromCart(index);
+      };
+
+      li.appendChild(removeButton);
+      cartList.appendChild(li);
+
+      totalPrice += parseFloat(item.price);
+  });
+
+  document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+}
+
+window.onload = updateCartDisplay;
+
+
+
+function addToCart(itemName, price, buttonId) {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+ 
+  cartItems.push({ name: itemName, price: price });
+
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+  let button = document.getElementById(buttonId);
+  button.textContent = 'Added to Cart';
+  button.disabled = true;
+
+
+}
+
+const products = [
+{ id: 1, name: 'Gold Ring', description: 'Our beautiful gold Artemis ring', price: 1900.99, image: 'https://kiara-adams.github.io/ecommerce-images/ring%20img1.jpg' },
+{ id: 2, name: 'Diamond Necklace', description: 'From our angel collection', price: 2500.99, image: 'https://kiara-adams.github.io/ecommerce-images/Opal%20Angel%20Necklace.jpeg' },
+{ id: 3, name: 'Silver Bracelet', description: 'From our Polly collection', price: 1600.99, image: 'https://kiara-adams.github.io/ecommerce-images/Pearl%20Crystal%20Cross%20Bracelet.jpeg' }
+];
+
+function formatPrice(price) {
+return price.toFixed(2);
+}
+
+function addItemToCart(productId) {
+const product = products.find(item => item.id === productId);
+if (product) {
+    const cartTable = document.getElementById('cart-items').getElementsByTagName('tbody')[0];
+    const row = cartTable.insertRow();
+    const imgCell = row.insertCell(0);
+    const nameCell = row.insertCell(1);
+    const descriptionCell = row.insertCell(2);
+    const priceCell = row.insertCell(3);
+    const quantityCell = row.insertCell(4);
+    const actionCell = row.insertCell(5);
+
+    imgCell.innerHTML = `<img src="${product.image}" alt="${product.name}">`;
+    nameCell.textContent = product.name;
+    descriptionCell.textContent = product.description;
+    priceCell.textContent = `R${formatPrice(product.price)}`;
+    quantityCell.innerHTML = `<input type="number" class="quantity-input" value="1" min="1">`;
+    actionCell.innerHTML = `<button onclick="removeCartItem(this)">Remove</button>`;
+
+    updateTotalPrice(product.price);
+}
+}
+
+function updateTotalPrice(price) {
+const totalPriceElement = document.getElementById('total-price').querySelector('span');
+let totalPrice = parseFloat(totalPriceElement.textContent);
+totalPrice += price;
+totalPriceElement.textContent = formatPrice(totalPrice);
+}
+
+function handleCheckout() {
+alert('Implement your checkout logic here.');
+}
+
+const checkoutBtn = document.getElementById('checkout-btn');
+checkoutBtn.addEventListener('click', handleCheckout);
+
+addItemToCart(1);
+
+function removeCartItem(button) {
+const row = button.parentNode.parentNode;
+const price = parseFloat(row.cells[3].textContent.replace('R', ''));
+row.parentNode.removeChild(row);
+updateTotalPrice(-price);
+}
+
+
