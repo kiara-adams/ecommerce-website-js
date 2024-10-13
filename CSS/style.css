@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 main {
     padding: 20px;
@@ -46,28 +52,36 @@ footer {
     padding: 30px;
 }
 
-/* carousel */
+/* caro2opxusel */
+
+.caro-head{
+  padding-top: 70px;
+ font-weight: bold;
+
+}
+
 .review-carousel {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
+  
 
   .review-slide {
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   .review-slide img {
-    max-width: 250px; 
+    max-width: 450px; 
     border-radius: 1%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
-
+/* 
   .review-content {
     background: #f9f9f9;
     padding: 20px;
     border-radius: px;
     text-align: center;
-  }
+  } */
 
   .review-content p {
     font-size: 1.2em;
@@ -119,13 +133,13 @@ footer {
 /* Styles for the cover image */
 .cover-image {
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 400px; /* Adjust height as needed */
     overflow: hidden;
 }
 
 .cover-image img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -578,9 +592,36 @@ footer {
 .search-container button:hover {
     background-color: #bbb;
 }
+
+
 .border-line {
     border-bottom: 1px solid black; 
     margin-top: 10px; 
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .product {
+      flex: 1 1 calc(25% - 20px); /* 4 products per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .product {
+      flex: 1 1 calc(33.33% - 20px); /* 3 products per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+      flex: 1 1 calc(50% - 20px); /* 2 products per row */
+  }
+}
+
+@media (max-width: 400px) {
+  .product {
+      flex: 1 1 100%; /* 1 product per row */
+  }
 }
 
 /* home page */
@@ -589,7 +630,6 @@ footer {
 }
 
 .border-line-1{
-    padding-top: 10px;
     border-bottom: 1px solid black; 
     margin-top: 10px; 
 }
@@ -931,8 +971,81 @@ body {
   }
   
 
+  /* mob */
   
-  
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+      width: 45%; /* Two cards per row on tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .card-pictures {
+      flex-direction: column; /* Stack the cards vertically on smaller screens */
+  }
+
+  .card {
+      width: 90%; /* Take up almost full width of the screen on mobile */
+      margin: 0 auto; /* Center the cards */
+  }
+
+  .shop-collection h2 {
+      font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  .shop-collection p {
+      font-size: 1rem;
+  }
+}             
+@media (max-width: 767px) {
+  .content-container {
+      flex-direction: column; /* Stack image and text vertically */
+      text-align: center; /* Center the text for better mobile display */
+  }
+
+  .image-cont img {
+      max-width: 100%; /* Ensure the image takes full width on mobile */
+  }
+
+  .text-container {
+      padding: 20px; /* Add padding around text */
+  }
+}
+
+
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  .cover-image {
+      height: 70vh; /* Adjust height for smaller devices */
+  }
+
+  .move h1 {
+      font-size: 2.5rem; /* Smaller heading for mobile */
+  }
+
+  .move p {
+      font-size: 1.2rem; /* Smaller paragraph text */
+  }
+
+  .move .btn {
+      font-size: 1rem; /* Adjust button text size */
+      padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
   .our-story-container {
     margin-bottom: 60px;
     display: flex;
@@ -1050,6 +1163,7 @@ body {
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    padding-bottom: 250px;
   }
   
   .image-container {
@@ -1121,10 +1235,11 @@ body {
     justify-content: space-evenly;
     gap: 20px;
     padding: 20px;
+    padding-top: 100px;
   }
   .image-cont{
     padding-top: 50px;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
 
   .background-image5{
